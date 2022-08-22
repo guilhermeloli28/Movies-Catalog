@@ -14,7 +14,7 @@ export default function CardMovie({ data }: CardMovieProps) {
   return (
     <Link
       href={{
-        pathname: '/trending/details',
+        pathname: '/details',
         query: { id: data.id },
       }}
     >
