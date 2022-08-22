@@ -1,9 +1,9 @@
 
 
-## :page_facing_up: Descrição
+## :page_facing_up: Description
 Movie list
 
-## 🛠 Tecnologias
+## 🛠 Tecnologies
 This project was developed with the following technologies
 
 - [React.js](https://pt-br.reactjs.org/)
