@@ -1,5 +1,39 @@
-* RUN PROJECT
 
-1. yarn 
-2. yarn dev
 
+## :page_facing_up: Descrição
+Movie list
+
+## 🛠 Tecnologias
+This project was developed with the following technologies
+
+- [React.js](https://pt-br.reactjs.org/)
+- NextJS
+- [Typescript.js](https://www.typescriptlang.org/)
+- Styled-components
+
+## :clipboard: Resources
+- [x] Movie list
+- [x] Filter movie by name 
+- [x] Filter by daily or weekly
+- [x] See movie details
+
+### Pre requisites
+Before starting, you will need to have the following tools installed on your machine:
+[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/), [VSCode](https://code.visualstudio.com/)
+
+### 💻️ Running the Front End
+
+```bash
+#Clone this repository
+$ https://github.com/guilhermeloli28/Movies-Catalog.git
+# Go to root folder
+$ cd "pastaraiz"
+# Install the dependencies
+$ yarn install
+# Run the application
+yarn dev
+# To access the application, access: http://localhost:3000
+```
+
+### 💻️ Link do Projeto
+Pokedex: https://pokedex-synvia-desafio.herokuapp.com/
