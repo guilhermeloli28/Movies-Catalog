@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import { FaStar } from 'react-icons/fa';
 import { API_KEY } from '../../config/key';
-import { Container, Footer, Info } from './styles';
+import { Container, Footer, Info } from '../../styles/details';
 
 interface MovieDetails {
   title: string;

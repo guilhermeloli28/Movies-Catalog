@@ -2,7 +2,7 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import CardMovie from '../../components/CardMovie';
 import NavBar from '../../components/Navbar';
-import { CardList } from './styles';
+import { CardList } from '../../styles/trending';
 import { API_KEY } from '../../config/key';
 import Search from '../../components/Search';
 import SelectOption from '../../components/SelectOption/Search';
