@@ -35,5 +35,5 @@ yarn dev
 # To access the application, access: http://localhost:3000
 ```
 
-### 💻️ Link do Projeto
+### 💻️ Link
 https://movies-trending-liard.vercel.app/trending
