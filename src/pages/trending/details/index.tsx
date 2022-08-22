@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import { FaStar } from 'react-icons/fa';
 import { API_KEY } from '../../../config/key';
-import { Average, Container } from './styles';
+import { Container, Footer, Info } from './styles';
 
 interface MovieDetails {
   title: string;
@@ -13,13 +13,15 @@ interface MovieDetails {
   name: string;
   first_air_date: string;
   overview: string;
+  runtime: number;
+  status: string;
 }
 
 export default function Details() {
   const router = useRouter();
   const [details, setDetails] = useState<MovieDetails>({} as MovieDetails);
   const [loading, setLoading] = useState(true);
-  console.log(details);
+
   useEffect(() => {
     async function getMovieDetails() {
       if (router.query.id) {
@@ -35,6 +37,10 @@ export default function Details() {
     getMovieDetails();
   }, [router]);
 
+  function goBack() {
+    router.push('/trending');
+  }
+
   if (loading) {
     return <h1 style={{ color: 'white' }}>Loading...</h1>;
   }
@@ -45,10 +51,23 @@ export default function Details() {
         src={`https://image.tmdb.org/t/p/w500/${details.poster_path}`}
         alt='movie'
       />
-      <div>
-        <h1>{details.title || details.name}</h1>
-        <span>{details.overview}</span>
-      </div>
+      <Info>
+        <div>
+          <h1>{details.title || details.name}</h1>
+          <div>
+            <FaStar fontSize={26} />
+            <span>{details.vote_average.toFixed(1)}</span>
+          </div>
+        </div>
+        <span className='overview'>{details.overview}</span>
+        <Footer>
+          <span>{details.release_date}</span>
+          <span>{details.runtime} min</span>
+        </Footer>
+        <span className='status'>Status: {details.status}</span>
+
+        <button onClick={goBack}>Back</button>
+      </Info>
     </Container>
   );
 }
