@@ -21,8 +21,9 @@ export interface Movie {
 
 export default function MoviesCatalog() {
   const [movies, setMovies] = useState<Movie[]>([]);
-  const [option, setOption] = useState<Option>('day');
+  const [option, setOption] = useState<Option>('week');
   const [search, setSearch] = useState<string>('');
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     async function getAllMoviesTrendings() {
@@ -50,6 +51,7 @@ export default function MoviesCatalog() {
       });
 
       setMovies(newData);
+      setIsLoading(false);
     }
 
     getAllMoviesTrendings();
@@ -58,6 +60,10 @@ export default function MoviesCatalog() {
   const moviesFiltered = movies.filter((movie) =>
     movie.name.includes(search.toLocaleLowerCase())
   );
+
+  if (isLoading) {
+    return <h1 color='white'>Loading...</h1>;
+  }
 
   return (
     <>
@@ -78,8 +84,6 @@ export default function MoviesCatalog() {
             </li>
           ))}
         </ul>
-
-        {movies.length === 0 && <h1>No movies found</h1>}
       </CardList>
     </>
   );
