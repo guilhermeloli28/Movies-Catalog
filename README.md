@@ -36,4 +36,4 @@ yarn dev
 ```
 
 ### 💻️ Link do Projeto
-Pokedex: https://pokedex-synvia-desafio.herokuapp.com/
+https://movies-trending-liard.vercel.app/trending
