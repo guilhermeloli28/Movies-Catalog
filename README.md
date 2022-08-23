@@ -1,9 +1,9 @@
 
 
-## :page_facing_up: Descrição
+## :page_facing_up: Description
 Movie list
 
-## 🛠 Tecnologias
+## 🛠 Tecnologies
 This project was developed with the following technologies
 
 - [React.js](https://pt-br.reactjs.org/)
@@ -35,5 +35,5 @@ yarn dev
 # To access the application, access: http://localhost:3000
 ```
 
-### 💻️ Link do Projeto
-Pokedex: https://pokedex-synvia-desafio.herokuapp.com/
+### 💻️ Link
+https://movies-trending-liard.vercel.app/trending
