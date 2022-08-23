@@ -9,8 +9,6 @@ interface CardMovieProps {
 }
 
 export default function CardMovie({ data }: CardMovieProps) {
-  const router = useRouter();
-
   return (
     <Link
       href={{

@@ -31,6 +31,8 @@ export default function MoviesCatalog() {
         `https://api.themoviedb.org/3/trending/all/${option}?api_key=${API_KEY}`
       );
 
+      //this logic below was made because some objects do not have the name property -->
+      //to prevent undefined error in moviesFiltered, where the search field is searched
       const newData = response.data.results.map((item) => {
         if (item.hasOwnProperty('name')) {
           return {
